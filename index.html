@@ -373,43 +373,46 @@
     </footer>
     
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Run this function ONLY after the entire page has loaded (including buttons and modal)
+        window.onload = function() {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // ** MODAL JAVASCRIPT **
-        const closeModalButton = document.getElementById('close-modal');
-        const modal = document.getElementById('join-modal');
+            // ** MODAL JAVASCRIPT **
+            const closeModalButton = document.getElementById('close-modal');
+            const modal = document.getElementById('join-modal');
 
-        // Function to show the modal
-        function openModal(event) {
-            // Prevent the default anchor jump/refresh
-            event.preventDefault(); 
-            // Change 'hidden' class to 'flex' to show it
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        // Function to hide the modal
-        function closeModal() {
-            // Change 'flex' class back to 'hidden' to hide it
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        }
-
-        // 1. Attach the open function to all Join buttons (the two at the top)
-        document.querySelectorAll('a[href="#join"]').forEach(button => {
-            button.addEventListener('click', openModal);
-        });
-
-        // 2. Attach the close function to the Close button
-        closeModalButton.addEventListener('click', closeModal);
-
-        // 3. Optional: Close modal when clicking outside of it
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModal();
+            // Function to show the modal
+            function openModal(event) {
+                // Prevent the default anchor jump/refresh
+                event.preventDefault(); 
+                // Change 'hidden' class to 'flex' to show it
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
             }
-        });
-        // ** END MODAL JAVASCRIPT **
+
+            // Function to hide the modal
+            function closeModal() {
+                // Change 'flex' class back to 'hidden' to hide it
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+
+            // 1. Attach the open function to all elements with href="#join"
+            document.querySelectorAll('a[href="#join"]').forEach(button => {
+                button.addEventListener('click', openModal);
+            });
+
+            // 2. Attach the close function to the Close button
+            closeModalButton.addEventListener('click', closeModal);
+
+            // 3. Optional: Close modal when clicking outside of it
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+            // ** END MODAL JAVASCRIPT **
+        };
     </script>
 </body>
 </html>

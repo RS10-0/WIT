@@ -13,12 +13,12 @@
         }
         
         /* GUARANTEED CUSTOM COLORS */
-        /* Light blue background for the header (Wix style) */
+        /* Light blue background for the header (Wix style: #f0f4f7) */
         .bg-hero-custom {
             background-color: #f0f4f7; 
         }
 
-        /* Dark primary color for text/button */
+        /* Dark primary color for text/button (#1e293b - Slate Dark) */
         .text-primary-dark {
             color: #1e293b; 
         }
@@ -47,7 +47,7 @@
         </div>
     </header>
 
-    <nav class="bg-white shadow-sm border-b border-gray-100">
+    <nav class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-10">
         <div class="container mx-auto px-6 flex justify-center space-x-8 md:space-x-12 py-3 text-lg font-medium">
             <a href="#" class="text-primary-dark border-b-2 border-primary-dark pb-1">Home</a>
             <a href="#about" class="text-gray-600 hover:text-primary-dark transition duration-150">About Us</a>
@@ -252,6 +252,72 @@
                         <li>• Discussion forums</li>
                         <li>• Project showcases</li>
                     </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-hero-custom border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-primary-dark mb-12">About Us</h2>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
+                
+                <div class="md:w-1/2">
+                    <div class="w-full h-80 bg-pink-200 rounded-lg shadow-xl overflow-hidden flex items-end justify-center">
+                        <img src="https://images.unsplash.com/photo-1542838132-7236d6ed9739?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Diverse group of team members smiling" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 text-left">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Founded in 2023, **Women in Tech** began with a small group of high school students passionate about closing the gender gap in STEM fields. We recognized the need for a supportive, inclusive, and challenging environment where future female leaders could thrive.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Today, our organization is run by a dedicated team of student volunteers and supported by professional mentors from the tech industry. We are committed to fostering a community where every member feels empowered to innovate, build, and connect with confidence.
+                    </p>
+                    <a href="#join" class="text-lg font-semibold text-primary-dark hover:text-gray-700 transition duration-300 border-b-2 border-primary-dark">
+                        Meet Our Team →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-primary-dark mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6 text-left">
+                
+                <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Who can join Women in Tech?</h3>
+                    <p class="text-gray-600">
+                        Our club is primarily designed for high school students interested in STEM, but we welcome all genders, including male allies, who support our mission of promoting diversity in technology.
+                    </p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Is there a fee to join the club?</h3>
+                    <p class="text-gray-600">
+                        No, there are no fees or dues required to become a member of Women in Tech. Some events, like competition travel, may have voluntary contributions, but core activities are free.
+                    </p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Do I need prior coding experience?</h3>
+                    <p class="text-gray-600">
+                        Absolutely not! Most of our workshops are designed for beginners. We aim to make STEM accessible, so if you are curious, we can teach you the rest!
+                    </p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">How often does the club meet?</h3>
+                    <p class="text-gray-600">
+                        We typically hold weekly workshops and bi-weekly speaker sessions or networking meetups. Check the "Upcoming Events" section for the latest schedule.
+                    </p>
                 </div>
 
             </div>

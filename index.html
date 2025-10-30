@@ -160,7 +160,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <img src="/WIT/Images/workshop.jpg" alt="Two people coding on a computer" class="w-full h-48 object-cover">
+                    <img src="WIT/Images/best.JPEG" alt="People collaborating during a class" class="w-full h-48 object-cover">
                     <div class="p-6 text-left">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Weekly Classes</h3>
                         <p class="text-gray-600">Structured coding lessons covering core curriculum like <strong>Java</strong>, web basics, and software development.</p>
@@ -168,7 +168,7 @@
                 </div>
 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <img src="/WIT/Images/robotics.jpg" alt="A small robot (Pepper) on display" class="w-full h-48 object-cover">
+                    <img src="WIT/Images/handslaptop.JPEG" alt="Hands working on a laptop" class="w-full h-48 object-cover">
                     <div class="p-6 text-left">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Monthly Workshops</h3>
                         <p class="text-gray-600">Deep dives into specialized topics, including robotics, data science, and guest speaker industry talks.</p>
@@ -176,7 +176,7 @@
                 </div>
 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <img src="/WIT/Images/community.jpg" alt="Audience in a large auditorium" class="w-full h-48 object-cover">
+                    <img src="WIT/Images/kidlaptop.JPEG" alt="A child working on a laptop" class="w-full h-48 object-cover">
                     <div class="p-6 text-left">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Hackathons & Competitions</h3>
                         <p class="text-gray-600">Team-based challenges to build practical projects, apply skills, and prepare for regional contests.</p>
@@ -374,28 +374,23 @@
             const closeModalButton = document.getElementById('close-modal');
             const modal = document.getElementById('join-modal');
 
-            // Function to show the modal
             function openModal(event) {
                 event.preventDefault(); 
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
             }
 
-            // Function to hide the modal
             function closeModal() {
                 modal.classList.add('hidden');
                 modal.classList.remove('flex');
             }
 
-            // 1. Attach the open function to all elements with href="#join"
             document.querySelectorAll('a[href="#join"]').forEach(button => {
                 button.addEventListener('click', openModal);
             });
 
-            // 2. Attach the close function to the Close button
             closeModalButton.addEventListener('click', closeModal);
 
-            // 3. Optional: Close modal when clicking outside of it
             modal.addEventListener('click', (event) => {
                 if (event.target === modal) {
                     closeModal();
@@ -404,7 +399,7 @@
             // ** END MODAL JAVASCRIPT **
 
 
-            // ** DYNAMIC NAVIGATION JS (NEW CODE) **
+            // ** DYNAMIC NAVIGATION JS **
             const navLinks = document.querySelectorAll('.nav-link');
             // Select all sections that have IDs corresponding to a nav link
             const sections = document.querySelectorAll('#mission, #about, #activities, #resources, #faq');

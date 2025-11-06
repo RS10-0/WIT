@@ -374,7 +374,7 @@
                 </div>
 
                 <div>
-                    <img src="Images/tanmayi.JPEG" alt="A photo of Tanmayi Vishal" class="w-28 h-28 sm:w-36 sm:h-36 rounded-full mx-auto mb-2 border-4 border-gray-200 object-cover">
+                    <img src="Images/tanmayi.JPEG" alt="A photo of Tanmayi Vishal" class="w-28 h-28 sm:w-36 sm:h-36 rounded-full mx-auto mb-2 border-4 border-gray-20t- <0 object-cover">
                     <h4 class="text-base sm:text-xl font-semibold text-gray-900">Tanmayi Vishal</h4>
                     <p class="text-gray-500 text-sm sm:text-base">Co-Founder</p>
                 </div>
@@ -554,7 +554,7 @@
             // ** END "WEEKLY CLASSES" MODAL JAVASCRIPT **
 
             
-            // ** NEW: "MONTHLY WORKSHOPS" MODAL JAVASCRIPT **
+            // ** NEW: "MONTHLY WORKSHOPS" MODAL JAVASCRIPT (BUG FIXED) **
             const monthlyWorkshopsModal = document.getElementById('monthly-workshops-modal');
             const closeMonthlyWorkshopsModalButton = document.getElementById('close-monthly-workshops-modal');
 
@@ -569,7 +569,7 @@
                 monthlyWorkshopsModal.classList.remove('flex');
             }
 
-Example website
+            // STRAY TEXT REMOVED FROM HERE
             document.querySelectorAll('a[href="#monthly-workshops"]').forEach(button => {
                 button.addEventListener('click', openMonthlyWorkshopsModal);
             });
@@ -584,7 +584,7 @@ Example website
             // ** END "MONTHLY WORKSHOPS" MODAL JAVASCRIPT **
 
 
-            // ** DYNAMIC NAVIGATION JS **
+            // ** DYNAMIC NAVIGATION JS (BUG FIXED) **
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('#mission, #about, #activities, #resources, #faq');
 
@@ -614,7 +614,8 @@ Example website
 
                         // Handle other links
                         navLinks.forEach(link => {
-                            if (link.getAttribute('href') && link.getAttri<ctrl61>bute('href').slice(1) === sectionId) {
+                            // STRAY TEXT REMOVED FROM HERE
+                            if (link.getAttribute('href') && link.getAttribute('href').slice(1) === sectionId) {
                                 removeActiveStates();
                                 link.classList.add('border-b-2', 'border-primary-dark', 'pb-1');
                             }

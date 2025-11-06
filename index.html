@@ -60,12 +60,36 @@
     </header>
 
     <nav class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-10" id="main-nav">
-        <div class="container mx-auto px-6 flex justify-center space-x-8 md:space-x-12 py-3 text-lg font-medium">
-            <a href="#" class="nav-link text-primary-dark transition duration-150">Home</a>
-            <a href="#activities" class="nav-link text-gray-600 hover:text-primary-dark transition duration-150">Activities</a>
-            <a href="#about" class="nav-link text-gray-600 hover:text-primary-dark transition duration-150">About Us</a>
-            <a href="#resources" class="nav-link text-gray-600 hover:text-primary-dark transition duration-150">Resources</a>
-            <a href="#faq" class="nav-link text-gray-600 hover:text-primary-dark transition duration-150">FAQ</a>
+        <div class="container mx-auto px-6 py-3 flex justify-between md:justify-center items-center">
+            
+            <a href="#" class="text-xl font-bold text-primary-dark md:hidden">
+                TechNova
+            </a>
+
+            <div class="md:hidden">
+                <button id="nav-toggle" class="text-primary-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex justify-center space-x-8 md:space-x-12 text-lg font-medium">
+                <a href="#" class="nav-link text-primary-dark transition duration-150">Home</a>
+                <a href="#activities" class="nav-link text-gray-600 hover:text-primary-dark transition duration-150">Activities</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-primary-dark transition duration-150">About Us</a>
+                <a href="#resources" class="nav-link text-gray-600 hover:text-primary-dark transition duration-150">Resources</a>
+                <a href="#faq" class="nav-link text-gray-600 hover:text-primary-dark transition duration-150">FAQ</a>
+            </div>
+
+        </div>
+
+        <div id="nav-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#" class="nav-link-mobile block py-3 px-6 text-center text-lg text-primary-dark transition duration-150">Home</a>
+            <a href="#activities" class="nav-link-mobile block py-3 px-6 text-center text-lg text-gray-600 hover:text-primary-dark transition duration-150">Activities</a>
+            <a href="#about" class="nav-link-mobile block py-3 px-6 text-center text-lg text-gray-600 hover:text-primary-dark transition duration-150">About Us</a>
+            <a href="#resources" class="nav-link-mobile block py-3 px-6 text-center text-lg text-gray-600 hover:text-primary-dark transition duration-150">Resources</a>
+            <a href="#faq" class="nav-link-mobile block py-3 px-6 text-center text-lg text-gray-600 hover:text-primary-dark transition duration-150">FAQ</a>
         </div>
     </nav>
     
@@ -479,40 +503,34 @@
 
             // ** DYNAMIC NAVIGATION JS **
             const navLinks = document.querySelectorAll('.nav-link');
-            // Select all sections that have IDs corresponding to a nav link
             const sections = document.querySelectorAll('#mission, #about, #activities, #resources, #faq');
 
-            // Function to remove all active states (underline)
             function removeActiveStates() {
                 navLinks.forEach(link => {
                     link.classList.remove('border-b-2', 'border-primary-dark', 'pb-1');
                 });
             }
 
-            // Configuration for the Intersection Observer
             const observerOptions = {
-                root: null, // viewport
+                root: null,
                 rootMargin: '0px',
-                // Threshold is set high to ensure the link changes as soon as the section is clearly in view
                 threshold: 0.5 
             };
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    // Check if the observed section is intersecting (in view)
                     if (entry.isIntersecting) {
                         const sectionId = entry.target.id;
                         
-                        // Handle the 'Home' link (which corresponds to the #mission section)
+                        // Handle the 'Home' link
                         if (sectionId === 'mission') {
                             removeActiveStates();
                             navLinks[0].classList.add('border-b-2', 'border-primary-dark', 'pb-1');
                             return;
                         }
 
-                        // For all other sections, find the matching navigation link
+                        // Handle other links
                         navLinks.forEach(link => {
-                            // Use slice(1) to remove the '#' from the link's href
                             if (link.getAttribute('href') && link.getAttribute('href').slice(1) === sectionId) {
                                 removeActiveStates();
                                 link.classList.add('border-b-2', 'border-primary-dark', 'pb-1');
@@ -522,16 +540,33 @@
                 });
             }, observerOptions);
 
-            // Tell the observer which sections to watch
             sections.forEach(section => {
                 observer.observe(section);
             });
 
-            // Handle the initial state for the Home link on page load
             if (window.scrollY === 0) {
                  navLinks[0].classList.add('border-b-2', 'border-primary-dark', 'pb-1');
             }
             // ** END DYNAMIC NAVIGATION JS **
+
+            
+            // ** NEW: HAMBURGER MENU JAVASCRIPT **
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
+
+            // Toggle menu on hamburger click
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('hidden');
+            });
+
+            // Close menu when a mobile link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.add('hidden');
+                });
+            });
+            // ** END HAMBURGER MENU JAVASCRIPT **
         };
     </script>
 </body>

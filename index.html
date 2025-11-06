@@ -160,11 +160,13 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <img src="Images/best.JPEG" alt="People collaborating during a class" class="w-full h-48 object-cover">
-                    <div class="p-6 text-left">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Weekly Classes</h3>
-                        <p class="text-gray-600">Structured coding lessons covering core curriculum like <strong>Java</strong>, web basics, and software development.</p>
-                    </div>
+                    <a href="#weekly-classes" class="block cursor-pointer">
+                        <img src="Images/best.JPEG" alt="People collaborating during a class" class="w-full h-48 object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Weekly Classes</h3>
+                            <p class="text-gray-600">Structured coding lessons covering core curriculum like <strong>Java</strong>, web basics, and software development.</p>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
@@ -311,7 +313,7 @@
                 <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">Where do I sign up?</h3>
                     <p class="text-gray-600">
-                        To enroll, simply scroll to the top of the page and click the Example Page <strong>"Join Our Community"</strong> button. You will be directed to a sign-up form. Following your submission, you will receive a confirmation email with class details for your child within <strong>1-2 business days</strong>.
+                        To enroll, simply scroll to the top of the page and click the <strong>"Join Our Community"</strong> button. You will be directed to a sign-up form. Following your submission, you will receive a confirmation email with class details for your child within <strong>1-2 business days</strong>.
                     </p>
                 </div>
 
@@ -356,10 +358,10 @@
         </div>
     </div>
 
-    <div id="meet-team-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-50">
-        <div class="bg-white p-8 rounded-lg shadow-2xl max-w-2xl w-11/12 transform transition-all duration-300 scale-100 max-h-[90vh] overflow-y-auto">
+    <div id="meet-team-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-2xl max-w-2xl w-full transform transition-all duration-300 scale-100 max-h-[90vh] overflow-y-auto">
             
-            <h3 class="text-3xl font-bold text-primary-dark mb-6 text-center">Meet the Team</h3>
+            <h3 class="text-2xl sm:text-3xl font-bold text-primary-dark mb-6 text-center">Meet the Team</h3>
 
             <div class="grid grid-cols-2 gap-4 text-center mb-6">
                 
@@ -377,20 +379,20 @@
             </div>
 
             <div class="text-center border-t border-gray-200 pt-6">
-                <p class="text-lg text-gray-700 leading-relaxed">
+                <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
                     At TechNova, our goal is to build a vibrant and inclusive space for the next generation of innovators. We are driven by the mission to make technology education accessible and engaging for everyone. By providing hands-on learning, dedicated mentorship, and a supportive peer network, we empower students to explore their curiosity, build tangible skills, and grow into confident leaders in the tech world.
                 </p>
             </div>
 
             <div class="text-center border-t border-gray-200 pt-6 mt-6">
-                <h4 class="text-xl font-semibold text-gray-900 mb-3">Contact Information</h4>
+                <h4 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Contact Information</h4>
                 <div class="space-y-2">
-                    <a href="mailto:TechNova@gmail.com" class="text-lg text-indigo-600 hover:underline">
+                    <a href="mailto:TechNova@gmail.com" class="text-base sm:text-lg text-indigo-600 hover:underline">
                         TechNova@gmail.com
                     </a>
-                    <div class="flex justify-center items-center space-x-2">
-                        <span class="text-gray-700 text-lg">Instagram:</span>
-                        <a href="https://www.instagram.com/technova.coding?igsh=cmF1Z3JkMTJ1MTYy" target="_blank" class="text-lg text-indigo-600 hover:underline">
+                    <div class="flex flex-col sm:flex-row justify-center items-center sm:space-x-2">
+                        <span class="text-gray-700 text-base sm:text-lg">Instagram:</span>
+                        <a href="https://www.instagram.com/technova.coding?igsh=cmF1Z3JkMTJ1MTYy" target="_blank" class="text-base sm:text-lg text-indigo-600 hover:underline">
                             @technova.coding
                         </a>
                     </div>
@@ -398,6 +400,31 @@
             </div>
 
             <button id="close-team-modal" class="mt-8 w-full py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition duration-150">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <div id="weekly-classes-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-2xl max-w-xl w-full transform transition-all duration-300 scale-100 max-h-[90vh] overflow-y-auto">
+            
+            <h3 class="text-2xl sm:text-3xl font-bold text-primary-dark mb-6 text-center">
+                Weekly Classes
+            </h3>
+
+            <div class="text-center mb-6">
+                <a href="httpsStorage-class memory in C" target="_blank" class="inline-block px-8 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition duration-150 shadow-lg">
+                    Register for Classes &rarr;
+                </a>
+            </div>
+
+            <div class="text-center border-t border-gray-200 pt-6">
+                <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    We offer weekly classes for all ages, designed to fit your child's learning style. We offer two different curriculums: <strong>Java Basics</strong>, which teaches the fundamentals of text-based, object-oriented programming, and <strong>Block Coding Fundamentals</strong>, which provides a visual, drag-and-drop introduction to logic and problem-solving.
+                </p>
+            </div>
+
+            <button id="close-weekly-classes-modal" class="mt-8 w-full py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition duration-150">
                 Close
             </button>
         </div>
@@ -475,6 +502,35 @@
                 }
             });
             // ** END "MEET THE TEAM" MODAL JAVASCRIPT **
+
+            
+            // ** NEW: "WEEKLY CLASSES" MODAL JAVASCRIPT **
+            const weeklyClassesModal = document.getElementById('weekly-classes-modal');
+            const closeWeeklyClassesModalButton = document.getElementById('close-weekly-classes-modal');
+
+            function openWeeklyClassesModal(event) {
+                event.preventDefault(); 
+                weeklyClassesModal.classList.remove('hidden');
+                weeklyClassesModal.classList.add('flex');
+            }
+
+            function closeWeeklyClassesModal() {
+                weeklyClassesModal.classList.add('hidden');
+                weeklyClassesModal.classList.remove('flex');
+            }
+
+            document.querySelectorAll('a[href="#weekly-classes"]').forEach(button => {
+                button.addEventListener('click', openWeeklyClassesModal);
+            });
+
+            closeWeeklyClassesModalButton.addEventListener('click', closeWeeklyClassesModal);
+
+            weeklyClassesModal.addEventListener('click', (event) => {
+                if (event.target === weeklyClassesModal) {
+                    closeWeeklyClassesModal();
+                }
+            });
+            // ** END "WEEKLY CLASSES" MODAL JAVASCRIPT **
 
 
             // ** DYNAMIC NAVIGATION JS **

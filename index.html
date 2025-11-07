@@ -180,11 +180,13 @@
                 </div>
 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <img src="Images/kidlaptop.JPEG" alt="A child working on a laptop" class="w-full h-48 object-cover">
-                    <div class="p-6 text-left">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Peer Mentorship</h3>
-                        <p class="text-gray-600">Get advice and help on a school or personal project from our team of experienced mentors.</p>
-                    </div>
+                    <a href="#peer-mentorship" class="block cursor-pointer">
+                        <img src="Images/kidlaptop.JPEG" alt="A child working on a laptop" class="w-full h-48 object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Peer Mentorship</h3>
+                            <p class="text-gray-600">Get advice and help on a school or personal project from our team of experienced mentors.</p>
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -261,7 +263,7 @@
                     <ul class="list-none space-y-2">
                         <li><a href="https://discord.gg/GAeKDQ4Ys" target="_blank" class="resource-link">• Connect with Peers</a></li>
                         <li><a href="#meet-team" class="resource-link">• Mentor Contact Information</a></li>
-                        <li><a href="https://forms.gle/5v7eA8x8gK6u4kK8A" target="_blank" class="resource-link">• Submit a Project Question</a></li>
+                        <li><a href="https://forms.gle/bRg7dr8vbZ7p37Gk8" target="_blank" class="resource-link">• Get Peer Mentorship</a></li>
                         <li><a href="https://docs.google.com/document/d/1Eb5WGT04fxthYDYDB_WkzLibGFlwquD7x7A8ncRAi00/edit?usp=sharing" target="_blank" class="resource-link">• Community Guidelines</a></li>
                     </ul>
                 </div>
@@ -451,6 +453,31 @@
         </div>
     </div>
 
+    <div id="peer-mentorship-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-2xl max-w-2xl w-full transform transition-all duration-300 scale-100 max-h-[90vh] overflow-y-auto">
+            
+            <h3 class="text-2xl sm:text-3xl font-bold text-primary-dark mb-6 text-center">
+                Peer Mentorship
+            </h3>
+
+            <div class="text-center mb-6">
+                <a href="https://forms.gle/bRg7dr8vbZ7p37Gk8" target="_blank" class="inline-block px-8 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition duration-150 shadow-lg">
+                    Request a Mentor &rarr;
+                </a>
+            </div>
+
+            <div class="text-center border-t border-gray-200 pt-6">
+                <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Do you need school help or want assistance on a personal project? Contact us for free, one-on-one help for school—coding or not coding related, including math and english!
+                </p>
+            </div>
+
+            <button id="close-peer-mentorship-modal" class="mt-8 w-full py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition duration-150">
+                Close
+            </button>
+        </div>
+    </div>
+
 
     <footer class="bg-gray-100 text-gray-600 py-6 mt-12 border-t border-gray-200">
         <div class="container mx-auto px-6 text-center text-sm">
@@ -554,7 +581,7 @@
             // ** END "WEEKLY CLASSES" MODAL JAVASCRIPT **
 
             
-            // ** NEW: "MONTHLY WORKSHOPS" MODAL JAVASCRIPT (BUG FIXED) **
+            // ** "MONTHLY WORKSHOPS" MODAL JAVASCRIPT **
             const monthlyWorkshopsModal = document.getElementById('monthly-workshops-modal');
             const closeMonthlyWorkshopsModalButton = document.getElementById('close-monthly-workshops-modal');
 
@@ -581,6 +608,35 @@
                 }
             });
             // ** END "MONTHLY WORKSHOPS" MODAL JAVASCRIPT **
+
+
+            // ** "PEER MENTORSHIP" MODAL JAVASCRIPT **
+            const peerMentorshipModal = document.getElementById('peer-mentorship-modal');
+            const closePeerMentorshipModalButton = document.getElementById('close-peer-mentorship-modal');
+
+            function openPeerMentorshipModal(event) {
+                event.preventDefault(); 
+                peerMentorshipModal.classList.remove('hidden');
+                peerMentorshipModal.classList.add('flex');
+            }
+
+            function closePeerMentorshipModal() {
+                peerMentorshipModal.classList.add('hidden');
+                peerMentorshipModal.classList.remove('flex');
+            }
+
+            document.querySelectorAll('a[href="#peer-mentorship"]').forEach(button => {
+                button.addEventListener('click', openPeerMentorshipModal);
+            });
+
+            closePeerMentorshipModalButton.addEventListener('click', closePeerMentorshipModal);
+
+            peerMentorshipModal.addEventListener('click', (event) => {
+                if (event.target === peerMentorshipModal) {
+                    closePeerMentorshipModal();
+                }
+            });
+            // ** END "PEER MENTORSHIP" MODAL JAVASCRIPT **
 
 
             // ** DYNAMIC NAVIGATION JS (BUG FIXED) **

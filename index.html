@@ -246,46 +246,78 @@
     </div>
 </section>
 
-    <section id="activities" class="py-20 bg-gray-50 border-t border-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            
-            <h2 class="text-4xl font-bold text-primary-dark mb-12">Activities & Events</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <a href="#weekly-classes" class="block cursor-pointer">
-                        <img src="Images/best.JPEG" alt="People collaborating during a class" class="w-full h-48 object-cover">
-                        <div class="p-6 text-left">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Weekly Classes</h3>
-                            <p class="text-gray-600">Structured coding lessons covering core curriculum like <strong>Java</strong>, web basics, and software development.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <a href="#monthly-workshops" class="block cursor-pointer">
-                        <img src="Images/handslaptop.JPEG" alt="Hands working on a laptop" class="w-full h-48 object-cover">
-                        <div class="p-6 text-left">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Monthly Workshops</h3>
-                            <p class="text-gray-600">Deep dives into specialized topics, including robotics, data science, and guest speaker industry talks.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <a href="#peer-mentorship" class="block cursor-pointer">
-                        <img src="Images/kidlaptop.JPEG" alt="A child working on a laptop" class="w-full h-48 object-cover">
-                        <div class="p-6 text-left">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Peer Mentorship</h3>
-                            <p class="text-gray-600">Get advice and help on a school or personal project from our team of experienced mentors.</p>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
+<section id="activities" class="py-24 bg-[#FAF5FF] border-t border-purple-100">
+    <div class="container mx-auto px-6">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-primary-dark mb-4">Activities & Events</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Explore our core programs designed to take you from a curious beginner to a confident creator.
+            </p>
         </div>
-    </section>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            
+            <div class="group relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img src="Images/best.JPEG" alt="People collaborating" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/20 to-transparent"></div>
+                
+                <div class="absolute bottom-6 left-6 right-6 p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 text-white transform transition-transform duration-500 group-hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold mb-2">Weekly Classes</h3>
+                    <p class="text-sm text-purple-100 opacity-90 leading-relaxed">
+                        Structured coding lessons covering core curriculum like <span class="font-bold text-white">Java</span>, web basics, and software development.
+                    </p>
+                    <div class="mt-4 flex items-center text-xs font-bold uppercase tracking-widest text-purple-300">
+                        Learn More 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img src="Images/handslaptop.JPEG" alt="Hands working on a laptop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/20 to-transparent"></div>
+                
+                <div class="absolute bottom-6 left-6 right-6 p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 text-white transform transition-transform duration-500 group-hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold mb-2">Monthly Workshops</h3>
+                    <p class="text-sm text-purple-100 opacity-90 leading-relaxed">
+                        Deep dives into specialized topics, including robotics, data science, and guest speaker industry talks.
+                    </p>
+                    <div class="mt-4 flex items-center text-xs font-bold uppercase tracking-widest text-purple-300">
+                        Explore Topics 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img src="Images/kidlaptop.JPEG" alt="Student working" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/20 to-transparent"></div>
+                
+                <div class="absolute bottom-6 left-6 right-6 p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 text-white transform transition-transform duration-500 group-hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold mb-2">Peer Mentorship</h3>
+                    <p class="text-sm text-purple-100 opacity-90 leading-relaxed">
+                        Get advice and help on school or personal projects from our team of experienced mentors.
+                    </p>
+                    <div class="mt-4 flex items-center text-xs font-bold uppercase tracking-widest text-purple-300">
+                        Meet Mentors 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <section id="about" class="py-20 bg-hero-custom border-t border-gray-200">
         <div class="container mx-auto px-6 text-center">

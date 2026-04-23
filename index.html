@@ -182,56 +182,69 @@
     </div>
 </section>
 
-    <section id="upcoming" class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            
-            <h2 class="text-4xl font-bold text-primary-dark mb-4">Upcoming Events</h2>
-            <p class="text-lg text-gray-600 mb-12">
-                Join us for workshops, speaker sessions, and community events
+ <section id="upcoming" class="py-24 bg-white relative">
+    <div class="container mx-auto px-6">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-primary-dark mb-4">Upcoming Events</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Join our specialized learning tracks and community-driven tech sessions.
             </p>
+        </div>
 
-            <div class="max-w-3xl mx-auto">
-                
-                <div class="text-left p-8 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 bg-white relative overflow-hidden">
-                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-purple-100 rounded-full blur-xl opacity-70"></div>
+        <div class="max-w-4xl mx-auto">
+            <div class="group relative bg-white border border-purple-100 rounded-[2rem] p-1 shadow-sm hover:shadow-2xl transition-all duration-500">
+                <div class="flex flex-col md:flex-row items-stretch gap-0 overflow-hidden rounded-[1.8rem]">
+                    
+                    <div class="md:w-1/4 bg-primary-dark flex flex-col items-center justify-center p-8 text-white text-center">
+                        <span class="text-sm font-bold uppercase tracking-widest opacity-80 mb-2">Track 02</span>
+                        <span class="text-5xl font-black">15</span>
+                        <span class="text-lg font-semibold uppercase">March</span>
+                    </div>
 
-                    <div class="relative z-10">
-                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-4">
-                            <div class="flex items-center space-x-4">
-                                <span class="text-4xl">🚀</span> 
-                                <div>
-                                    <h3 class="text-2xl font-bold text-gray-900">Empowering Future Leaders: Women in Tech</h3>
-                                    <p class="text-sm font-medium text-purple-600">February 11 • 5:00 PM - 7:00 PM</p>
-                                </div>
-                            </div>
-                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800 self-start">
-                                Beginner Friendly
+                    <div class="md:w-3/4 p-8 md:p-10 bg-white flex flex-col justify-center">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider">
+                                New Cohort
+                            </span>
+                            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider">
+                                Limited Seats
                             </span>
                         </div>
-                        
-                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                            Join us for an inspiring online session dedicated to celebrating the power of women in technology! In this empowering workshop, we will come together to share stories, build confidence, and collaborate on a creative <strong>mini-project</strong>. It is a supportive space to explore curiosity and innovation without limits—no prior experience required!
+
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-primary-dark mb-4 group-hover:text-purple-600 transition-colors">
+                            AI Optimization & Vibe Coding for the Future
+                        </h3>
+
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Kick off the next phase of TechNova. Learn how to optimize AI workflows and master the art of <strong>Vibe Coding</strong>—the future of high-speed, intuitive development. No complex prerequisites, just a drive to innovate.
                         </p>
 
-                        <div class="flex items-center justify-between mt-4">
-                            <div class="text-sm text-gray-500">
-                                📍 Location: Online (Link sent upon registration)
+                        <div class="flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-gray-100">
+                            <div class="flex flex-col">
+                                <span class="text-sm text-gray-400 uppercase font-bold tracking-tighter">Time & Venue</span>
+                                <span class="text-primary-dark font-semibold">6:00 PM EST • Virtual Tech Hub</span>
                             </div>
-                            <a href="https://forms.gle/ZeqF7rsiz1uecyN16" target="_blank" class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 md:text-lg transition duration-150">
-                                Sign Up Free
-                            </a>
+                            
+                            <button class="cursor-not-allowed bg-gray-100 text-gray-400 px-8 py-3 rounded-xl font-bold transition">
+                                Registration Opening Soon
+                            </button>
                         </div>
                     </div>
                 </div>
-
             </div>
-            
-            <a href="#activities" class="mt-12 inline-block px-8 py-3 text-lg font-semibold bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition duration-300">
-                View All Activities
-            </a>
-
         </div>
-    </section>
+
+        <div class="text-center mt-16">
+            <a href="#activities" class="text-purple-600 font-bold hover:text-purple-800 transition flex items-center justify-center gap-2">
+                View all past tracks
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
 
     <section id="activities" class="py-20 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6 text-center">

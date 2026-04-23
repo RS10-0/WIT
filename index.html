@@ -11,7 +11,7 @@
         
         body {
             font-family: 'Roboto', sans-serif;
-            color: #3B0764; /* Deep purple text for better readability */
+            color: #3B0764; /* This ensures all general text defaults to the deep button color */
         }
         
         /* Soft Lavender Background for Hero/Header */
@@ -19,12 +19,13 @@
             background-color: #F3E8FF; 
         }
 
-        /* Vibrant Purple for Accents/Buttons */
-        .text-primary-brand {
-            color: #A855F7; 
+        /* Use this class for "TechNova" and main titles to match the button */
+        .text-primary-dark {
+            color: #3B0764; 
+            font-weight: 700;
         }
         
-        /* Deep Purple for Primary Buttons/Dark Sections */
+        /* The "Join Our Community" Button Color */
         .bg-primary-dark {
             background-color: #3B0764;
             color: #FFFFFF;
@@ -32,7 +33,7 @@
 
         /* Refined Resource Links */
         .resource-link {
-            color: #6B21A8; /* Muted purple */
+            color: #6B21A8; 
             text-decoration: none;
             transition: all 0.2s ease-in-out;
             cursor: pointer;
@@ -40,7 +41,7 @@
         }
         
         .resource-link:hover {
-            color: #3B0764; /* Deep purple on hover */
+            color: #3B0764; /* Matches the button/brand color on hover */
             text-decoration: underline;
         }
     </style>
